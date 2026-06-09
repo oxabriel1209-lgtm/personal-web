@@ -8,3 +8,6 @@ photo.jpg
 PHOTO2.jpg
 ScreenShot*.png
 *.pdf
+
+.vercel
+.env*
