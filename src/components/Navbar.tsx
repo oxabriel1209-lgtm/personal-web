@@ -51,45 +51,46 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Contact button */}
+        {/* Hamburger (mobile) */}
+        <button
+          onClick={() => setMobileOpen(!mobileOpen)}
+          className="md:hidden w-10 h-10 flex items-center justify-center flex-shrink-0 rounded-lg hover:bg-gray-100 transition-colors"
+          aria-label="菜单"
+        >
+          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            {mobileOpen
+              ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+              : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16M4 18h16" />
+            }
+          </svg>
+        </button>
+
+        {/* Contact button (desktop) */}
         <a
           href="#contact"
           onClick={(e) => { e.preventDefault(); handleClick('#contact') }}
-          className="bg-black text-white hover:bg-black/90 rounded-md px-5 h-12 flex items-center justify-center flex-shrink-0 gap-2 font-bold text-sm transition-colors"
+          className="hidden md:flex bg-black text-white hover:bg-black/90 rounded-md px-5 h-12 items-center justify-center flex-shrink-0 gap-2 font-bold text-sm transition-colors"
         >
           <Mail className="w-4 h-4" />
-          <span className="hidden sm:inline">联系</span>
+          <span>联系</span>
         </a>
       </nav>
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden mt-2 mx-auto max-w-2xl bg-white border-[3px] border-black rounded-xl p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+        <div className="md:hidden mt-2 mx-auto max-w-2xl bg-white border-[3px] border-black rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={(e) => { e.preventDefault(); handleClick(link.href) }}
-              className="block px-4 py-3 font-bold hover:bg-gray-100 rounded-lg transition-colors"
+              className="block px-5 py-3.5 font-bold hover:bg-gray-100 first:rounded-t-xl last:rounded-b-xl transition-colors text-base"
             >
               {link.label}
             </a>
           ))}
         </div>
       )}
-
-      {/* Mobile toggle */}
-      <button
-        onClick={() => setMobileOpen(!mobileOpen)}
-        className="md:hidden fixed bottom-6 right-6 z-50 w-14 h-14 bg-black text-white rounded-full flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] hover:scale-110 transition-transform"
-      >
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          {mobileOpen
-            ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
-            : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16M4 18h16" />
-          }
-        </svg>
-      </button>
     </div>
   )
 }

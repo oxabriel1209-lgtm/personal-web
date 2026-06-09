@@ -41,12 +41,12 @@ export default function Skills() {
     <section id="skills" className="py-16 md:py-24">
       {/* Marquee tag cloud */}
       <div className="overflow-hidden mb-16">
-        <div className="relative overflow-hidden bg-[#6366F1] py-10 -rotate-[3deg] min-w-[120vw] -mx-[10vw] left-0 border-y-[3px] border-black">
-          <div className="flex items-center gap-10 animate-marquee whitespace-nowrap">
+        <div className="relative bg-[#6366F1] py-8 md:py-10 -rotate-[3deg] scale-110 border-y-[3px] border-black">
+          <div className="flex items-center gap-6 md:gap-10 animate-marquee whitespace-nowrap">
             {[...tagCloud, ...tagCloud, ...tagCloud].map((tag, i) => (
               <span
                 key={i}
-                className="text-white font-bold text-xl md:text-2xl px-6 py-2 bg-white/10 rounded-full border-2 border-white/30"
+                className="text-white font-bold text-sm md:text-2xl px-4 md:px-6 py-1.5 md:py-2 bg-white/10 rounded-full border-2 border-white/30"
               >
                 {tag}
               </span>
