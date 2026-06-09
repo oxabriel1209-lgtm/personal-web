@@ -8,7 +8,7 @@ export default function About() {
         <div className="flex justify-center order-2 md:order-1">
           <div className="relative w-full max-w-[280px] sm:max-w-md md:max-w-lg aspect-square border-[4px] border-black rounded-full overflow-hidden bg-[#FF6B6B] shadow-[-8px_8px_0px_0px_rgba(0,0,0,1)]">
             <img
-              src="/images/avatar-circle.jpg"
+              src={`${import.meta.env.BASE_URL}images/avatar-circle.jpg`}
               alt="欧宇轩"
               className="w-full h-full object-cover"
             />

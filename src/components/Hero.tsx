@@ -55,7 +55,7 @@ export default function Hero() {
         <div className="flex justify-center md:justify-end">
           <div className="relative w-full max-w-[260px] sm:max-w-sm md:max-w-md aspect-square bg-[#FDB927] border-4 border-black rounded-3xl overflow-hidden shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
             <img
-              src="/images/avatar.jpg"
+              src={`${import.meta.env.BASE_URL}images/avatar.jpg`}
               alt="欧宇轩"
               className="w-full h-full object-cover"
             />
