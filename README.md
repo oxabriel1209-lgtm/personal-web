@@ -1,9 +1,6 @@
-<div align="center">
-  <button id="btn-en" onclick="document.getElementById('en').style.display='block';document.getElementById('cn').style.display='none';this.style.background='#2F81F7';this.style.color='#fff';document.getElementById('btn-cn').style.background='#e5e5e5';document.getElementById('btn-cn').style.color='#333'" style="background:#2F81F7;color:#fff;border:none;padding:8px 24px;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer;margin:0 6px">🇬🇧 EN</button>
-  <button id="btn-cn" onclick="document.getElementById('cn').style.display='block';document.getElementById('en').style.display='none';this.style.background='#2F81F7';this.style.color='#fff';document.getElementById('btn-en').style.background='#e5e5e5';document.getElementById('btn-en').style.color='#333'" style="background:#e5e5e5;color:#333;border:none;padding:8px 24px;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer;margin:0 6px">🇨🇳 中文</button>
-</div>
-
-<div id="en">
+<details open>
+<summary><b>🇬🇧 English</b> ‎ | ‎ <a href="#cn">🇨🇳 切换到中文</a></summary>
+<br>
 
 # Hi there 👋, I'm Yuxuan Ou (欧宇轩) 😎
 
@@ -84,9 +81,15 @@ Full-stack recommendation system (Recall → Ranking) on **MovieLens-1M**
 ![RQ-VAE](https://img.shields.io/badge/-RQ--VAE-000000?style=flat)
 ![Causal Impact](https://img.shields.io/badge/-Causal_Impact-000000?style=flat)
 
-</div>
+</details>
 
-<div id="cn" style="display:none">
+---
+
+<div id="cn">
+
+<details>
+<summary><b>🇨🇳 中文</b> ‎ | ‎ <a href="#">🇬🇧 Switch to English</a></summary>
+<br>
 
 # 嗨 👋，我是欧宇轩 😎
 
@@ -166,5 +169,7 @@ Full-stack recommendation system (Recall → Ranking) on **MovieLens-1M**
 ![GRPO](https://img.shields.io/badge/-GRPO-000000?style=flat)
 ![RQ-VAE](https://img.shields.io/badge/-RQ--VAE-000000?style=flat)
 ![Causal Impact](https://img.shields.io/badge/-Causal_Impact-000000?style=flat)
+
+</details>
 
 </div>
